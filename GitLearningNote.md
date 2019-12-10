@@ -19,8 +19,8 @@
 
 ### **版本回退**
 7.  <span id="question_7"></span>Git中用什么表示当前版本？上一个版本？往前n个版本？[查看答案](#answer_7)
-8.  <span id="question_8"></span>如何把当前版本回退到上一个版本？--hard参数有什么意义？[查看答案](#answer_8)
-9.  <span id="question_9"></span>[查看答案](#answer_9)
+8.  <span id="question_8"></span>如何把当前版本回退到上一个版本？--hard参数有什么意义？回退的原理是什么？[查看答案](#answer_8)
+9.  <span id="question_9"></span>忘记commit id和版本如何回退？未commit但是有修改的其他文件会不会被回退？[查看答案](#answer_9)
 10. <span id="question_10"></span>[查看答案](#answer_10)
 11. <span id="question_11"></span>[查看答案](#answer_11)
 12. <span id="question_12"></span>[查看答案](#answer_12)
