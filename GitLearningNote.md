@@ -14,7 +14,7 @@
 ### **创建版本库**
 
 4.  <span id="question_4"></span>什么是版本库？如何初始化版本库？如何添加文件？[查看答案](#answer_4)
-5.  <span id="question_5"></span>
+5.  <span id="question_5"></span>如何查看仓库的状态？如何查看文件具体修改了什么内容？
 6.  <span id="question_6"></span>
 7.  <span id="question_7"></span>
 8.  <span id="question_8"></span>
@@ -53,6 +53,5 @@
             ```git
             git commit -m "wrote a file"
             ```
-        因为git有两个区域，工作区和暂存区，git add把工作区的修改提交到暂存区
-        [返回问题](#question_4)
+        git有两个区域，工作区和暂存区，git add把工作区的修改提交到暂存区，git commit把暂存区的修改保存到本地库，git push把本地库的记录，推送至远程库。[返回问题](#question_4)
 5.  
