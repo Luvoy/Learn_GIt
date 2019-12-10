@@ -15,14 +15,16 @@
 
 4.  <span id="question_4"></span>什么是版本库？如何初始化版本库？如何添加文件？[查看答案](#answer_4)
 5.  <span id="question_5"></span>如何查看仓库的状态？如何查看文件具体修改了什么内容？[查看答案](#answer_5)
-6.  <span id="question_6"></span>
-7.  <span id="question_7"></span>
-8.  <span id="question_8"></span>
-9.  <span id="question_9"></span>
-10. <span id="question_10"></span>
-11. <span id="question_11"></span>
-12. <span id="question_12"></span>
-13. <span id="question_13"></span>
+6.  <span id="question_6"></span>如何看到git的日志信息？如何只输出commit id和commit的信息？commit id是用什么计算出来的？[查看答案](#answer_6)
+
+### **版本回退**
+7.  <span id="question_7"></span>Git中用什么表示当前版本？上一个版本？往前n个版本？[查看答案](#answer_7)
+8.  <span id="question_8"></span>如何把当前版本回退到上一个版本？--hard参数有什么意义？[查看答案](#answer_8)
+9.  <span id="question_9"></span>[查看答案](#answer_9)
+10. <span id="question_10"></span>[查看答案](#answer_10)
+11. <span id="question_11"></span>[查看答案](#answer_11)
+12. <span id="question_12"></span>[查看答案](#answer_12)
+13. <span id="question_13"></span>[查看答案](#answer_13)
 
 
 ## 答案
