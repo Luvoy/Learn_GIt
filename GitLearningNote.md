@@ -70,3 +70,8 @@
 7.  <span id="anwser_7"></span>用HEAD表示当前版本，HEAD^表示上一版本，HEAD^表示上上版本，往上100个版本是HEAD~100。[返回问题](#question_7)
 8.  <span id="anwser_8"></span>用```git reset --hard 某版本```即可回退到某一版本。此时，回退只是把HEAD的指向修改[返回问题](#question_8)
 9.  <span id="anwser_9"></span>用命令```git relog```可以看到历史命令。(#question_9)
+
+
+
+
+hahahaha
