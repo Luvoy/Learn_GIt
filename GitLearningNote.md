@@ -66,3 +66,7 @@
             ```
         git有两个区域，工作区和暂存区，git add把工作区的修改提交到暂存区，git commit把暂存区的修改保存到本地库，git push把本地库的记录，推送至远程库。[返回问题](#question_4)
 5.  <span id="answer_5"></span>使用```git status```命令查看仓库状态，使用```git diff```命令查看文件变化[返回问题](#question_5)
+6.  <span id="anwser_6:"></span>使用```git log```命令查看仓库日志，加上```--pretty=oneline```参数可以将每次修改按一行显示。其中第一列是commit id，由SHA1计算得出。[返回问题](#question_6)
+7.  <span id="anwser_7"></span>用HEAD表示当前版本，HEAD^表示上一版本，HEAD^表示上上版本，往上100个版本是HEAD~100。[返回问题](#question_7)
+8.  <span id="anwser_8"></span>用```git reset --hard 某版本```即可回退到某一版本。此时，回退只是把HEAD的指向修改[返回问题](#question_8)
+9.  <span id="anwser_9"></span>用命令```git relog```可以看到历史命令。(#question_9)
