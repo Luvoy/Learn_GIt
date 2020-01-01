@@ -30,9 +30,9 @@
 7.  <span id="question_7"></span>Git中用什么表示当前版本？上一个版本？往前n个版本？[查看答案](#answer_7)
 8.  <span id="question_8"></span>如何把当前版本回退到上一个版本？--hard参数有什么意义？回退的原理是什么？[查看答案](#answer_8)
 9.  <span id="question_9"></span>忘记commit id和版本如何回退？未commit但是有修改的其他文件会不会被回退？[查看答案](#answer_9)
-10. <span id="question_10"></span>[查看答案](#answer_10)
-11. <span id="question_11"></span>[查看答案](#answer_11)
-12. <span id="question_12"></span>[查看答案](#answer_12)
+10. <span id="question_10"></span>什么是工作区？什么是版本库？add和commit在这些区域上执行了什么操作？[查看答案](#answer_10)
+11. <span id="question_11"></span>某文件经历了：修改1->add->修改2->commit，提交的是哪次修改？为什么？[查看答案](#answer_11)
+12. <span id="question_12"></span>什么命令可以撤销上一次修改？（让这个文件回到最近一次git commit或git add时的状态？）[查看答案](#answer_12)
 13. <span id="question_13"></span>[查看答案](#answer_13)
 
 
@@ -69,9 +69,6 @@
 6.  <span id="anwser_6:"></span>使用```git log```命令查看仓库日志，加上```--pretty=oneline```参数可以将每次修改按一行显示。其中第一列是commit id，由SHA1计算得出。[返回问题](#question_6)
 7.  <span id="anwser_7"></span>用HEAD表示当前版本，HEAD^表示上一版本，HEAD^表示上上版本，往上100个版本是HEAD~100。[返回问题](#question_7)
 8.  <span id="anwser_8"></span>用```git reset --hard 某版本```即可回退到某一版本。此时，回退只是把HEAD的指向修改[返回问题](#question_8)
-9.  <span id="anwser_9"></span>用命令```git relog```可以看到历史命令。(#question_9)
-
-
-
-
-hahahaha
+9.  <span id="anwser_9"></span>用命令```git relog```可以看到历史命令。没有commit 的文件，用reset，也会恢复到之前的版本。(#question_9)
+10. <span id="anwser_10"></span>文件夹目录是工作区（working directory），而.git文件夹是Git版本库（Repository），版本库包括缓存区（stage）和第一个分支（master），指向master的指针是HEAD。add命令会把文件修改添加到暂存区，commit把暂存区全部提交到当前分支。提交后，工没有对工作区修改，那么工作区就是干净的(#question_10)
+11. <span id="anwser_11"></span>只会提交第一次修改，因为git必须先把文件添加到暂存区在提交。(#question_11)
