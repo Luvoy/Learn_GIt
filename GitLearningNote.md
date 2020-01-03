@@ -41,8 +41,8 @@
 14. <span id="question_14"></span>如何创建并在github上添加SSH KEY？[查看答案](#answer_14)
 15. <span id="question_15"></span>如何在github上创建远程仓库，并将本地库推送到远程？[查看答案](#answer_15)
 16. <span id="question_16"></span>如何将远程仓库克隆到本地?[查看答案](#answer_16)
-17. <span id="question_17"></span>如何创建分支?如何查看当前分支?[查看答案](#answer_17)
-18. <span id="question_18"></span>[查看答案](#answer_18)
+17. <span id="question_17"></span>如何创建分支?如何查看当前分支?如何合并分支?如何删除分支?[查看答案](#answer_17)
+18. <span id="question_18"></span>主分支可以看到其他分支的修改和提交吗?[查看答案](#answer_18)
 19. <span id="question_19"></span>[查看答案](#answer_19)
 20. <span id="question_20"></span>[查看答案](#answer_20)
 21. <span id="question_21"></span>[查看答案](#answer_21)
@@ -109,15 +109,16 @@
     这是SSH协议, 必须在github个人设置里加入**SSHKEY**才可以
     
     没有SSH就用http吧: ```git clone https://github.com/UserName/GitName.git```[返回问题](#question_16)
-17. <span id="answer_16"></span>创建分支
-:
-
-    ```git branch 分支名```
-
-    ```git checkout 分支名```
-
-    当然也可以合写成一条```git checkout -b 分支名```
-
-    可以用```git branch查看当前分支```
+17. <span id="answer_17"></span>
+    - 创建分支: ```git branch 分支名```
+    - 查看分支: ```git branch```
+    - 切换分支: ```git checkout 分支名```或者```git switch 分支名```
+    - 创建+切换分支: ```git checkout -b 分支名```或者```git switch -c 分支名```
+    - 合并某分支到当前分支: ```git merge 要合并的分支名```
+    - 删除分支: ```git branch -d 分支名```
+    [返回问题](#question_17)
+18. <span id="answer_18"></span>在dev分区修改了文件，然后切换到主分区，查看status，是可以看到状态的，就可以在主分区来add 和commit dev 分区的改动;
     
-    [返回问题](#question_16)
+    如果在dev分区修改了文件，并且add和commit 了 那么切换到主分区就看不到修改了
+
+    所有分支, 工作区和暂存区是公共的
