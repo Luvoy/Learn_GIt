@@ -40,8 +40,8 @@
 
 14. <span id="question_14"></span>如何创建并在github上添加SSH KEY？[查看答案](#answer_14)
 15. <span id="question_15"></span>如何在github上创建远程仓库，并将本地库推送到远程？[查看答案](#answer_15)
-16. <span id="question_16"></span>[查看答案](#answer_16)
-17. <span id="question_17"></span>[查看答案](#answer_17)
+16. <span id="question_16"></span>如何将远程仓库克隆到本地?[查看答案](#answer_16)
+17. <span id="question_17"></span>如何创建分支?如何查看当前分支?[查看答案](#answer_17)
 18. <span id="question_18"></span>[查看答案](#answer_18)
 19. <span id="question_19"></span>[查看答案](#answer_19)
 20. <span id="question_20"></span>[查看答案](#answer_20)
@@ -87,6 +87,37 @@
 10. <span id="answer_10"></span>文件夹目录是**工作区**（working directory），而.git文件夹是Git**版本库**（Repository），版本库包括**缓存区**（stage）和**第一个分支**（master），指向master的指针是HEAD。add命令会把文件修改添加到暂存区，commit把暂存区全部提交到当前分支。提交后，工没有对工作区修改，那么工作区就是干净的[返回问题](#question_10)
 11. <span id="answer_11"></span>只会提交第一次修改，因为git必须先把文件添加到**暂存区**再提交。[返回问题](#question_11)
 12. <span id="answer_12"></span>```git checkout -- file```可以撤销修改，如果文件**修改后没有add**就撤销，则退回到和版本库一样的状态；如果**已经add后修改**再撤销，则退回到add时的状态。```git reset```可以将暂存区的修改回退到工作区[返回问题](#question_12)
-13. <span id="answer_13"></span>```git checkout -- file```已经删除了文件，可以```git rm file```确认在仓库中删除并且commit。如果是误删，可以用checkout --file回退，但是这个文件必须add过才行。[返回问题](#question_13)
-14. <span id="answer_14"></span>```ssh-keygen -t rsa -C "email"```创建ssh key，然后在github的个人主页，settings->ssh keys-> add ssh key。注意把公钥里**所有的文本**都粘贴上去。[返回问题](#question_14)
-15. <span id="answer_15"></span>在github个人页上创建一个repository，然后在本地用``` git remote add origin https://github.com/~~user_name~~/~~repo_name~~.git```，然后使用```git push -u origin master```将本地库内容推送到远程。-u是做关联，以后可省。[返回问题](#question_15)
+13. <span id="answer_13"></span>```git checkout -- file```已经删除了文件，可以```git rm file```确认在仓库中删除并且commit。
+    
+    如果是误删，可以用checkout --file回退，但是这个文件必须add过才行。[返回问题](#question_13)
+14. <span id="answer_14"></span>```ssh-keygen -t rsa -C "email"```创建ssh key
+    
+    然后在github的个人主页，settings->ssh keys-> add ssh key
+    
+    注意把公钥里**所有的文本**都粘贴上去。[返回问题](#question_14)
+15. <span id="answer_15"></span>在github个人页上创建一个repository，然后在本地用
+    
+    ```git remote add origin git@github.com:UserName/GitName.git```
+    
+    (这个格式是SSH协议, 也可以用http协议, 直接clone)
+
+    然后使用```git push -u origin master```
+    
+    将本地库内容推送到远程。-u是做关联，以后可省。[返回问题](#question_15)
+16. <span id="answer_16"></span>在某目录下使用命令```git clone git@github.com:UserName/GitName.git```
+    
+    这是SSH协议, 必须在github个人设置里加入**SSHKEY**才可以
+    
+    没有SSH就用http吧: ```git clone https://github.com/UserName/GitName.git```[返回问题](#question_16)
+17. <span id="answer_16"></span>创建分支
+:
+
+    ```git branch 分支名```
+
+    ```git checkout 分支名```
+
+    当然也可以合写成一条```git checkout -b 分支名```
+
+    可以用```git branch查看当前分支```
+    
+    [返回问题](#question_16)
