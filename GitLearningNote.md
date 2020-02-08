@@ -41,7 +41,9 @@
 14. <span id="question_14"></span>如何创建并在github上添加SSH KEY？[查看答案](#answer_14)
 15. <span id="question_15"></span>如何在github上创建远程仓库，并将本地库推送到远程？[查看答案](#answer_15)
 16. <span id="question_16"></span>如何将远程仓库克隆到本地?[查看答案](#answer_16)
-17. <span id="question_17"></span>如何创建分支?如何查看当前分支?如何合并分支?如何删除分支?[查看答案](#answer_17)
+    
+## **分支管理**
+17. <span id="question_17"></span>分支有什么用?如何创建分支?如何查看当前分支?如何合并分支?如何删除分支?[查看答案](#answer_17)
 18. <span id="question_18"></span>主分支可以看到其他分支的修改和提交吗?[查看答案](#answer_18)
 19. <span id="question_19"></span>[查看答案](#answer_19)
 20. <span id="question_20"></span>[查看答案](#answer_20)
@@ -110,6 +112,7 @@
     
     没有SSH就用http吧: ```git clone https://github.com/UserName/GitName.git```[返回问题](#question_16)
 17. <span id="answer_17"></span>
+    - 分支的作用: 每个人可以在自己的分支上干活, 互不影响, 想提交就提交, 等开发完后, 再一次性合并到原来的分支上
     - 创建分支: ```git branch 分支名```
     - 查看分支: ```git branch```
     - 切换分支: ```git checkout 分支名```或者```git switch 分支名```
@@ -117,7 +120,7 @@
     - 合并某分支到当前分支: ```git merge 要合并的分支名```
     - 删除分支: ```git branch -d 分支名```
     [返回问题](#question_17)
-18. <span id="answer_18"></span>在dev分区修改了文件，然后切换到主分区，查看status，是可以看到状态的，就可以在主分区来add 和commit dev 分区的改动;
+18.  <span id="answer_18"></span>在dev分区修改了文件，然后切换到主分区，查看status，是可以看到状态的，就可以在主分区来add 和commit dev 分区的改动;
     
     如果在dev分区修改了文件，并且add和commit 了 那么切换到主分区就看不到修改了
 
