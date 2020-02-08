@@ -19,3 +19,6 @@ add 1s
 
 
 create a new branch learnbranch
+
+
+add merge --no-ff
