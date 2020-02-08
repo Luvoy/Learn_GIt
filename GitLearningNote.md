@@ -49,7 +49,7 @@
 19. <span id="question_19"></span>在某一分支A上修改文件并提交, 然后切换到另一分支B上修改提交, 然后将A合并到B上, 会发生什么? 如何解决?[查看答案](#answer_19)
 20. <span id="question_20"></span>用什么命令可以直观地查看分支的合并情况?[查看答案](#answer_20)
 21. <span id="question_21"></span>通常情况下合并分支Git会使用Fsat forward模式, 这种模式有什么特点? 如何不使用这种模式?[查看答案](#answer_21)
-22. <span id="question_22"></span>[查看答案](#answer_22)
+22. <span id="question_22"></span>实际开发中应该怎样进行分支管理比较好?[查看答案](#answer_22)
 23. <span id="question_23"></span>[查看答案](#answer_23)
 
 # 答案
@@ -133,5 +133,12 @@
      git log --graph --pretty=oneline --abbrev-commit
      ```
      [返回问题](#question_20)
-22.  <span id="answer_21"></span>Fast-forward是快进模式, 直接把当前分支指向要要合并的分支, 但是这种模式下, 删除分支后, 会丢失分支信息. 禁用Fast-forward模式, git在merge时会生成一个新的commit. 使用```--no-ff```参数即可.[返回问题](#question_21)
-23.  <span id="answer_22"></span>[返回问题](#question_22)
+21.  <span id="answer_21"></span>Fast-forward是快进模式, 直接把当前分支指向要要合并的分支, 但是这种模式下, 删除分支后, 会丢失分支信息. 禁用Fast-forward模式, git在merge时会生成一个新的commit. 使用```--no-ff```参数即可.[返回问题](#question_21)
+22.  <span id="answer_22"></span>master分支应该是非常稳定的, 仅用来发布新版本, 工作都在dev分支上, 不同的人协作时, 都创建自己的分支往dev分支上合并[返回问题](#question_22)
+23.  <span id="answer_22"></span>[返回问题](#question_23)
+24.  <span id="answer_22"></span>[返回问题](#question_24)
+25.  <span id="answer_22"></span>[返回问题](#question_25)
+26.  <span id="answer_22"></span>[返回问题](#question_26)
+27.  <span id="answer_22"></span>[返回问题](#question_27)
+28.  <span id="answer_22"></span>[返回问题](#question_28)
+29.  <span id="answer_22"></span>[返回问题](#question_29)
