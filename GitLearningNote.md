@@ -51,8 +51,19 @@
 21. <span id="question_21"></span>通常情况下合并分支Git会使用Fsat forward模式, 这种模式有什么特点? 如何不使用这种模式?[查看答案](#answer_21)
 22. <span id="question_22"></span>实际开发中应该怎样进行分支管理比较好?[查看答案](#answer_22)
 23. <span id="question_23"></span>突然需要创建新分支, 但是当前分支上的工作暂时无法提交怎么办?[查看答案](#answer_23)
-24. <span id="question_23"></span>[查看答案](#answer_24)
-25. <span id="question_23"></span>[查看答案](#answer_25)
+24. <span id="question_24"></span>在master分支上修复的bug，想要合并到当前dev分支, 而不是再修复一遍, 有什么方法吗?[查看答案](#answer_24)
+25. <span id="question_25"></span>还没有合并的分支如何删除? 这用于什么场景?[查看答案](#answer_25)
+
+## **远程与协作**
+
+26. <span id="question_26"></span>[查看答案](#answer_26)
+27. <span id="question_27"></span>[查看答案](#answer_27)
+28. <span id="question_28"></span>[查看答案](#answer_28)
+29. <span id="question_29"></span>[查看答案](#answer_29)
+30. <span id="question_30"></span>[查看答案](#answer_30)
+31. <span id="question_31"></span>[查看答案](#answer_31)
+32. <span id="question_32"></span>[查看答案](#answer_32)
+33. 
 
 # 答案
 
@@ -103,8 +114,6 @@
 15. <span id="answer_15"></span>在github个人页上创建一个repository，然后在本地用
     
     ```git remote add origin git@github.com:UserName/GitName.git```
-    
-    (这个格式是SSH协议, 也可以用http协议, 直接clone)
 
     然后使用```git push -u origin master```
     
@@ -137,15 +146,23 @@
      [返回问题](#question_20)
 21.  <span id="answer_21"></span>Fast-forward是快进模式, 直接把当前分支指向要要合并的分支, 但是这种模式下, 删除分支后, 会丢失分支信息. 禁用Fast-forward模式, git在merge时会生成一个新的commit. 使用```--no-ff```参数即可.[返回问题](#question_21)
 22.  <span id="answer_22"></span>master分支应该是非常稳定的, 仅用来发布新版本, 工作都在dev分支上, 不同的人协作时, 都创建自己的分支往dev分支上合并[返回问题](#question_22)
-23.  <span id="answer_22"></span>
+23.  <span id="answer_23"></span>
      - 使用```git stash```命令, 将当前工作现场储存起来.
      - 使用```git stash list```命令, 查看已经储藏的工作
      - 使用```git stash apply```恢复, 然后```git stash drop```删除, 或者```git stash pop```弹栈
      - 
     [返回问题](#question_23)
-24.  <span id="answer_22"></span>[返回问题](#question_24)
-25.  <span id="answer_22"></span>[返回问题](#question_25)
-26.  <span id="answer_22"></span>[返回问题](#question_26)
-27.  <span id="answer_22"></span>[返回问题](#question_27)
-28.  <span id="answer_22"></span>[返回问题](#question_28)
-29.  <span id="answer_22"></span>[返回问题](#question_29)
+24.  <span id="answer_24"></span>用```git cherry-pick <commit>```命令, 将在其他分支做的commit, 在当前分支上复制重现一下[返回问题](#question_24)
+25.  <span id="answer_25"></span>```git branch -D <分支名>```强制删除, 用于开发了一个新的实验功能, 但是突然要放弃的时候.[返回问题](#question_25)
+26.  <span id="answer_26"></span>[返回问题](#question_26)
+27.  <span id="answer_27"></span>[返回问题](#question_27)
+28.  <span id="answer_28"></span>[返回问题](#question_28)
+29.  <span id="answer_29"></span>[返回问题](#question_29)
+30.  <span id="answer_30"></span>[返回问题](#question_30)
+31.  <span id="answer_31"></span>[返回问题](#question_31)
+32.  <span id="answer_32"></span>[返回问题](#question_32)
+33.  <span id="answer_33"></span>[返回问题](#question_33)
+34.  <span id="answer_34"></span>[返回问题](#question_34)
+35.  <span id="answer_35"></span>[返回问题](#question_35)
+36.  <span id="answer_36"></span>[返回问题](#question_36)
+37.  
