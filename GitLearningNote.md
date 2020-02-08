@@ -50,7 +50,9 @@
 20. <span id="question_20"></span>用什么命令可以直观地查看分支的合并情况?[查看答案](#answer_20)
 21. <span id="question_21"></span>通常情况下合并分支Git会使用Fsat forward模式, 这种模式有什么特点? 如何不使用这种模式?[查看答案](#answer_21)
 22. <span id="question_22"></span>实际开发中应该怎样进行分支管理比较好?[查看答案](#answer_22)
-23. <span id="question_23"></span>[查看答案](#answer_23)
+23. <span id="question_23"></span>突然需要创建新分支, 但是当前分支上的工作暂时无法提交怎么办?[查看答案](#answer_23)
+24. <span id="question_23"></span>[查看答案](#answer_24)
+25. <span id="question_23"></span>[查看答案](#answer_25)
 
 # 答案
 
@@ -123,9 +125,9 @@
     [返回问题](#question_17)
 18.  <span id="answer_18"></span>在dev分区修改了文件，然后切换到主分区，查看status，是可以看到状态的，就可以在主分区来add 和commit dev 分区的改动;
     
-    如果在dev分区修改了文件，并且add和commit 了 那么切换到主分区就看不到修改了
+     如果在dev分区修改了文件，并且add和commit 了 那么切换到主分区就看不到修改了
 
-    所有分支, 工作区和暂存区是公共的
+     所有分支, 工作区和暂存区是公共的
     [返回问题](#question_18)
 19.  <span id="answer_19"></span>会出现冲突, 因为两个分支文件不一样, 无法合并. 应该具体修改后重新提交, 此时会自动合并.[返回问题](#question_19)
 20.  <span id="answer_20"></span>推荐使用
@@ -135,7 +137,12 @@
      [返回问题](#question_20)
 21.  <span id="answer_21"></span>Fast-forward是快进模式, 直接把当前分支指向要要合并的分支, 但是这种模式下, 删除分支后, 会丢失分支信息. 禁用Fast-forward模式, git在merge时会生成一个新的commit. 使用```--no-ff```参数即可.[返回问题](#question_21)
 22.  <span id="answer_22"></span>master分支应该是非常稳定的, 仅用来发布新版本, 工作都在dev分支上, 不同的人协作时, 都创建自己的分支往dev分支上合并[返回问题](#question_22)
-23.  <span id="answer_22"></span>[返回问题](#question_23)
+23.  <span id="answer_22"></span>
+     - 使用```git stash```命令, 将当前工作现场储存起来.
+     - 使用```git stash list```命令, 查看已经储藏的工作
+     - 使用```git stash apply```恢复, 然后```git stash drop```删除, 或者```git stash pop```弹栈
+     - 
+    [返回问题](#question_23)
 24.  <span id="answer_22"></span>[返回问题](#question_24)
 25.  <span id="answer_22"></span>[返回问题](#question_25)
 26.  <span id="answer_22"></span>[返回问题](#question_26)
