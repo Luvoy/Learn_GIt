@@ -43,11 +43,12 @@
 16. <span id="question_16"></span>如何将远程仓库克隆到本地?[查看答案](#answer_16)
     
 ## **分支管理**
+
 17. <span id="question_17"></span>分支有什么用?如何创建分支?如何查看当前分支?如何合并分支?如何删除分支?[查看答案](#answer_17)
 18. <span id="question_18"></span>主分支可以看到其他分支的修改和提交吗?[查看答案](#answer_18)
 19. <span id="question_19"></span>在某一分支A上修改文件并提交, 然后切换到另一分支B上修改提交, 然后将A合并到B上, 会发生什么? 如何解决?[查看答案](#answer_19)
-20. <span id="question_20"></span>[查看答案](#answer_20)
-21. <span id="question_21"></span>[查看答案](#answer_21)
+20. <span id="question_20"></span>用什么命令可以直观地查看分支的合并情况?[查看答案](#answer_20)
+21. <span id="question_21"></span>通常情况下合并分支Git会使用Fsat forward模式, 这种模式有什么特点? 如何不使用这种模式?[查看答案](#answer_21)
 22. <span id="question_22"></span>[查看答案](#answer_22)
 23. <span id="question_23"></span>[查看答案](#answer_23)
 
@@ -126,7 +127,11 @@
 
     所有分支, 工作区和暂存区是公共的
     [返回问题](#question_18)
-19.  <span id="answer_19"></span>会出现冲突, 因为两个分支文件不一样, 无法合并.[返回问题](#question_19)
-20.  <span id="answer_20"></span>[返回问题](#question_20)
-21.  <span id="answer_21"></span>[返回问题](#question_21)
-22.  <span id="answer_22"></span>[返回问题](#question_22)
+19.  <span id="answer_19"></span>会出现冲突, 因为两个分支文件不一样, 无法合并. 应该具体修改后重新提交, 此时会自动合并.[返回问题](#question_19)
+20.  <span id="answer_20"></span>推荐使用
+     ```git
+     git log --graph --pretty=oneline --abbrev-commit
+     ```
+     [返回问题](#question_20)
+22.  <span id="answer_21"></span>Fast-forward是快进模式, 直接把当前分支指向要要合并的分支, 但是这种模式下, 删除分支后, 会丢失分支信息. 禁用Fast-forward模式, git在merge时会生成一个新的commit. 使用```--no-ff```参数即可.[返回问题](#question_21)
+23.  <span id="answer_22"></span>[返回问题](#question_22)
