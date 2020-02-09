@@ -59,7 +59,7 @@
 26. <span id="question_26"></span>如何查看远程仓库信息?[查看答案](#answer_2pan id="question_27"></span>查看答案](#answer_27)
 27. <span id="question_26"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_26)
 28. <span id="question_27"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[[查看答案](#answer_27)
-29. <span id="question_28"></span>[查看答案](#answer_28)
+29. <span id="question_28"></span>rebase操作有什么用?[查看答案](#answer_28)
 30. <span id="question_29"></span>[查看答案](#answer_29)
 31. <span id="question_30"></span>[查看答案](#answer_30)
 32. <span id="question_31"></span>[查看答案](#answer_31)
@@ -159,7 +159,7 @@
 27.  <span id="answer_27"></span>在本地创建一个分支, 比如dev, 然后添加文件, 提交修改后, 用```git push origin dev```即可在远程创建新的分支并提交[返回问题](#question_27)
 28.  <span id="answer_28"></span>这样推送往往会失败, 因为远程分支比本地的要新, 应该先用```git pull```抓取远程的版本到本地, 才能推送自己的. 
      要注意建立本地分支和远程分支的关联: ```git branch --set-upstream-to=origin/<branch-name> <branch-name>```[返回问题](#question_28)
-29.  <span id="answer_29"></span>[返回问题](#question_29)
+29.  <span id="answer_29"></span>rebase操作可以把本地未push的分叉提交历史整理成直线；目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。[返回问题](#question_29)
 30.  <span id="answer_30"></span>[返回问题](#question_30)
 31.  <span id="answer_31"></span>[返回问题](#question_31)
 32.  <span id="answer_32"></span>[返回问题](#question_32)
