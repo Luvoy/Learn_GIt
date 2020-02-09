@@ -56,14 +56,15 @@
 
 ## **远程与协作**
 
-26. <span id="question_26"></span>[查看答案](#answer_26)
-27. <span id="question_27"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[查看答案](#answer_27)
-28. <span id="question_28"></span>[查看答案](#answer_28)
-29. <span id="question_29"></span>[查看答案](#answer_29)
-30. <span id="question_30"></span>[查看答案](#answer_30)
-31. <span id="question_31"></span>[查看答案](#answer_31)
-32. <span id="question_32"></span>[查看答案](#answer_32)
-33. 
+26. <span id="question_26"></span>如何查看远程仓库信息?[查看答案](#answer_2pan id="question_27"></span>查看答案](#answer_27)
+27. <span id="question_26"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_26)
+28. <span id="question_27"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[[查看答案](#answer_27)
+29. <span id="question_28"></span>[查看答案](#answer_28)
+30. <span id="question_29"></span>[查看答案](#answer_29)
+31. <span id="question_30"></span>[查看答案](#answer_30)
+32. <span id="question_31"></span>[查看答案](#answer_31)
+33. <span id="question_32"></span>[查看答案](#answer_32)
+34. 
 
 # 答案
 
@@ -154,9 +155,10 @@
     [返回问题](#question_23)
 24.  <span id="answer_24"></span>用```git cherry-pick <commit>```命令, 将在其他分支做的commit, 在当前分支上复制重现一下[返回问题](#question_24)
 25.  <span id="answer_25"></span>```git branch -D <分支名>```强制删除, 用于开发了一个新的实验功能, 但是突然要放弃的时候.[返回问题](#question_25)
-26.  <span id="answer_26"></span>[返回问题](#question_26)
-27.  <span id="answer_27"></span>[返回问题](#question_27)
-28.  <span id="answer_28"></span>[返回问题](#question_28)
+26.  <span id="answer_26"></span>```git remote -v```查看远程仓库信息[返回问题](#question_26)
+27.  <span id="answer_27"></span>在本地创建一个分支, 比如dev, 然后添加文件, 提交修改后, 用```git push origin dev```即可在远程创建新的分支并提交[返回问题](#question_27)
+28.  <span id="answer_28"></span>这样推送往往会失败, 因为远程分支比本地的要新, 应该先用```git pull```抓取远程的版本到本地, 才能推送自己的. 
+     要注意建立本地分支和远程分支的关联: ```git branch --set-upstream-to=origin/<branch-name> <branch-name>```[返回问题](#question_28)
 29.  <span id="answer_29"></span>[返回问题](#question_29)
 30.  <span id="answer_30"></span>[返回问题](#question_30)
 31.  <span id="answer_31"></span>[返回问题](#question_31)
