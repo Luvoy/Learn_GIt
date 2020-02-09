@@ -56,7 +56,7 @@
 
 ## **远程与协作**
 
-26. <span id="question_26"></span>[查看答案](#answer_26)
+26. <span id="question_26"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_26)
 27. <span id="question_27"></span>[查看答案](#answer_27)
 28. <span id="question_28"></span>[查看答案](#answer_28)
 29. <span id="question_29"></span>[查看答案](#answer_29)
@@ -154,7 +154,7 @@
     [返回问题](#question_23)
 24.  <span id="answer_24"></span>用```git cherry-pick <commit>```命令, 将在其他分支做的commit, 在当前分支上复制重现一下[返回问题](#question_24)
 25.  <span id="answer_25"></span>```git branch -D <分支名>```强制删除, 用于开发了一个新的实验功能, 但是突然要放弃的时候.[返回问题](#question_25)
-26.  <span id="answer_26"></span>[返回问题](#question_26)
+26.  <span id="answer_26"></span>在本地创建一个分支, 比如dev, 然后添加文件, 提交修改后, 用```git push origin dev```即可在远程创建新的分支并提交[返回问题](#question_26)
 27.  <span id="answer_27"></span>[返回问题](#question_27)
 28.  <span id="answer_28"></span>[返回问题](#question_28)
 29.  <span id="answer_29"></span>[返回问题](#question_29)
