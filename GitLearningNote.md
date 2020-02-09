@@ -57,7 +57,7 @@
 ## **远程与协作**
 
 26. <span id="question_26"></span>[查看答案](#answer_26)
-27. <span id="question_27"></span>[查看答案](#answer_27)
+27. <span id="question_27"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[查看答案](#answer_27)
 28. <span id="question_28"></span>[查看答案](#answer_28)
 29. <span id="question_29"></span>[查看答案](#answer_29)
 30. <span id="question_30"></span>[查看答案](#answer_30)
