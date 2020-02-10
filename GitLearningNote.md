@@ -64,8 +64,8 @@
 ## **标签管理**
 
 
-30. <span id="question_29"></span>如何打标签? [查看答案](#answer_29)
-31. <span id="question_30"></span>[查看答案](#answer_30)
+30. <span id="question_29"></span>如何打标签? 有什么用? [查看答案](#answer_29)
+31. <span id="question_30"></span>如何把标签推送到远程?[查看答案](#answer_30)
 32. <span id="question_31"></span>[查看答案](#answer_31)
 33. <span id="question_32"></span>[查看答案](#answer_32)
 34. 
@@ -167,8 +167,10 @@
 30.  <span id="answer_30"></span>
      - 命令```git tag <tagname>```用于新建一个标签，默认为HEAD，后面也可以指定一个commit id
      - 命令```git tag -a <tagname> -m "descriptions"```可以指定标签信息
-     - 命令```git tag```可以查看所有标签[返回问题](#question_30)
-31.  <span id="answer_31"></span>[返回问题](#question_31)
+     - 命令```git tag```可以查看所有标签
+     
+     标签相当于给某次提交起了别名[返回问题](#question_30)
+31.  <span id="answer_31"></span>```git push```不能把标签推送到远程, 必须显式地操作```git push origin <tagname>```, 或者一次性推送全部标签```git push origin --tags```. 命令```git tag -d <tagname>```可以删除一个本地标签,```git push origin :refs/tags/<tagname>```可以删除一个远程标签[返回问题](#question_31)
 32.  <span id="answer_32"></span>[返回问题](#question_32)
 33.  <span id="answer_33"></span>[返回问题](#question_33)
 34.  <span id="answer_34"></span>[返回问题](#question_34)
