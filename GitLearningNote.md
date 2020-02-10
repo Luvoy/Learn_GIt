@@ -66,18 +66,21 @@
 27. <span id="question_27"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_27)
 28. <span id="question_28"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[[查看答案](#answer_28)
 29. <span id="question_29"></span>rebase操作有什么用?[查看答案](#answer_29)
+30. <span id="question_30"></span>如何删除远程分支?[查看答案](#answer_30)
 
 ## **标签管理**
 
-30. <span id="question_30"></span>如何打标签? 有什么用? [查看答案](#answer_30)
-31. <span id="question_31"></span>如何把标签推送到远程?[查看答案](#answer_31)
+ 
+31. <span id="question_30"></span>如何打标签? 有什么用? [查看答案](#answer_30)
+32. <span id="question_31"></span>如何把标签推送到远程?[查看答案](#answer_31)
 
 ## **使用github**
 
-32. <span id="question_32"></span>如何参与一个开源项目?[查看答案](#answer_32)
-33. <span id="question_33"></span>[查看答案](#answer_33)
-34. <span id="question_34"></span>[查看答案](#answer_34)
-35. <span id="question_35"></span>[查看答案](#answer_35)
+    
+33. <span id="question_32"></span>如何参与一个开源项目?[查看答案](#answer_32)
+34. <span id="question_33"></span>[查看答案](#answer_33)
+35. <span id="question_34"></span>[查看答案](#answer_34)
+36. <span id="question_35"></span>[查看答案](#answer_35)
 
 # 答案
 
@@ -173,21 +176,23 @@
 28.  <span id="answer_28"></span>这样推送往往会失败, 因为远程分支比本地的要新, 应该先用```git pull```抓取远程的版本到本地, 才能推送自己的. 
      要注意建立本地分支和远程分支的关联: ```git branch --set-upstream-to=origin/<branch-name> <branch-name>```[返回问题](#question_28)
 29.  <span id="answer_29"></span>rebase操作可以把本地未push的分叉提交历史整理成直线；目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。[返回问题](#question_29)
-30.  <span id="answer_30"></span>
+30.  <span id="answer_30"></span>```git push origin --delete <分支名>```删除远程分支[返回问题](#question_30)
+31.  <span id="answer_30"></span>
+
      - 命令```git tag <tagname>```用于新建一个标签，默认为HEAD，后面也可以指定一个commit id
      - 命令```git tag -a <tagname> -m "descriptions"```可以指定标签信息
      - 命令```git tag```可以查看所有标签
      
-     标签相当于给某次提交起了别名[返回问题](#question_30)
-31.  <span id="answer_31"></span>
+     标签相当于给某次提交起了别名[返回问题](#question_31)
+32.  <span id="answer_32"></span>
      - ```git push```不能把标签推送到远程
      - 必须显式地操作```git push origin <tagname>```
      - 或者一次性推送全部标签```git push origin --tags```
      - 命令```git tag -d <tagname>```可以删除一个本地标签
      - ```git push origin :refs/tags/<tagname>```可以删除一个远程标签
      
-     [返回问题](#question_31)
-32.  <span id="answer_32"></span>
+     [返回问题](#question_32)
+33.  <span id="answer_33"></span>
      1.   找到别人的开源项目, 点击fork,相当于在自己账号下克隆了该仓库
      2.   然后在本地克隆**自己账号的**这个仓库, 这三者关系如下
         
@@ -207,8 +212,7 @@
         
      3.   对自己的本地仓库做出想要的修改, 然后推送到自己的远程仓库
      4.   如果希望项目原有者接受你的修改, 必须pull request
-     [返回问题](#question_32)
-33.  <span id="answer_33"></span>[返回问题](#question_33)
+     [返回问题](#question_33)
 34.  <span id="answer_34"></span>[返回问题](#question_34)
 35.  <span id="answer_35"></span>[返回问题](#question_35)
  
