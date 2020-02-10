@@ -177,7 +177,7 @@
      要注意建立本地分支和远程分支的关联: ```git branch --set-upstream-to=origin/<branch-name> <branch-name>```[返回问题](#question_28)
 29.  <span id="answer_29"></span>rebase操作可以把本地未push的分叉提交历史整理成直线；目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。[返回问题](#question_29)
 30.  <span id="answer_30"></span>```git push origin --delete <分支名>```删除远程分支[返回问题](#question_30)
-31.  <span id="answer_30"></span>
+31.  <span id="answer_31"></span>
 
      - 命令```git tag <tagname>```用于新建一个标签，默认为HEAD，后面也可以指定一个commit id
      - 命令```git tag -a <tagname> -m "descriptions"```可以指定标签信息
