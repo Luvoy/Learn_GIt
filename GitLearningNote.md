@@ -4,13 +4,19 @@
 
 # 写在前面
 
-学习东西时如果追求效率，那么很容易学了就忘，必须时常复习。
+本笔记参考了[廖雪峰老师的Git教程](http://t.cn/zQ6LFwE)
 
-```
-子曰：温故而知新，可以为师矣。
-```
+学习东西时如果只追求速度，那么很容易学了就忘，必须时常复习。
 
-然而复习时看是不行的，容易眼高手低，遂整理问题和答案，并且用跳跃查看以起到遮掩的目的。
+> 子曰：温故而知新，可以为师矣。
+
+然而复习时光看是不行的，容易眼高手低，遂整理问题和答案，并且用跳跃查看以起到遮掩的目的。
+
+其他链接:
+
+[国外网友制作的Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf)
+
+[Git的官方网站](https://git-scm.com/)
 
 # 复习问题
 
@@ -56,19 +62,22 @@
 
 ## **远程与协作**
 
-26. <span id="question_26"></span>如何查看远程仓库信息?[查看答案](#answer_2pan id="question_27"></span>查看答案](#answer_27)
-27. <span id="question_26"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_26)
-28. <span id="question_27"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[[查看答案](#answer_27)
-29. <span id="question_28"></span>rebase操作有什么用?[查看答案](#answer_28)
+26. <span id="question_26"></span>如何查看远程仓库信息?[查看答案](#answer_2pan id="question_27"></span>查看答案](#answer_26)
+27. <span id="question_27"></span>远程origin下只有一个master分支, 如何创建一个新分支?[查看答案](#answer_27)
+28. <span id="question_28"></span>如果一个用户A在他的设备上向origin下的dev分支提交并推送了东西, 然后B也想向dev推送,应该怎么做?[[查看答案](#answer_28)
+29. <span id="question_29"></span>rebase操作有什么用?[查看答案](#answer_29)
 
 ## **标签管理**
 
+30. <span id="question_30"></span>如何打标签? 有什么用? [查看答案](#answer_30)
+31. <span id="question_31"></span>如何把标签推送到远程?[查看答案](#answer_31)
 
-30. <span id="question_29"></span>如何打标签? 有什么用? [查看答案](#answer_29)
-31. <span id="question_30"></span>如何把标签推送到远程?[查看答案](#answer_30)
-32. <span id="question_31"></span>[查看答案](#answer_31)
-33. <span id="question_32"></span>[查看答案](#answer_32)
-34. 
+## **使用github**
+
+32. <span id="question_32"></span>如何参与一个开源项目?[查看答案](#answer_32)
+33. <span id="question_33"></span>[查看答案](#answer_33)
+34. <span id="question_34"></span>[查看答案](#answer_34)
+35. <span id="question_35"></span>[查看答案](#answer_35)
 
 # 答案
 
@@ -154,9 +163,9 @@
 23.  <span id="answer_23"></span>
      - 使用```git stash```命令, 将当前工作现场储存起来.
      - 使用```git stash list```命令, 查看已经储藏的工作
-     - 使用```git stash apply```恢复, 然后```git stash drop```删除, 或者```git stash pop```弹栈
-     - 
-    [返回问题](#question_23)
+     - 使用```git stash apply```恢复, 然后```git stash drop```删除, 或者```git stash pop```弹栈 
+     
+     [返回问题](#question_23)
 24.  <span id="answer_24"></span>用```git cherry-pick <commit>```命令, 将在其他分支做的commit, 在当前分支上复制重现一下[返回问题](#question_24)
 25.  <span id="answer_25"></span>```git branch -D <分支名>```强制删除, 用于开发了一个新的实验功能, 但是突然要放弃的时候.[返回问题](#question_25)
 26.  <span id="answer_26"></span>```git remote -v```查看远程仓库信息[返回问题](#question_26)
@@ -170,10 +179,36 @@
      - 命令```git tag```可以查看所有标签
      
      标签相当于给某次提交起了别名[返回问题](#question_30)
-31.  <span id="answer_31"></span>```git push```不能把标签推送到远程, 必须显式地操作```git push origin <tagname>```, 或者一次性推送全部标签```git push origin --tags```. 命令```git tag -d <tagname>```可以删除一个本地标签,```git push origin :refs/tags/<tagname>```可以删除一个远程标签[返回问题](#question_31)
-32.  <span id="answer_32"></span>[返回问题](#question_32)
+31.  <span id="answer_31"></span>
+     - ```git push```不能把标签推送到远程
+     - 必须显式地操作```git push origin <tagname>```
+     - 或者一次性推送全部标签```git push origin --tags```
+     - 命令```git tag -d <tagname>```可以删除一个本地标签
+     - ```git push origin :refs/tags/<tagname>```可以删除一个远程标签
+     
+     [返回问题](#question_31)
+32.  <span id="answer_32"></span>
+     1.   找到别人的开源项目, 点击fork,相当于在自己账号下克隆了该仓库
+     2.   然后在本地克隆**自己账号的**这个仓库, 这三者关系如下
+        
+        ```
+        ┌─ GitHub ────────────────────────────────────┐
+        │                                             │
+        │ ┌─────────────────┐     ┌─────────────────┐ │
+        │ │ twbs/bootstrap  │────>│  my/bootstrap   │ │
+        │ └─────────────────┘     └─────────────────┘ │
+        │                                  ▲          │
+        └──────────────────────────────────┼──────────┘
+                                           ▼
+                                ┌─────────────────┐
+                                │ local/bootstrap │
+                                └─────────────────┘
+        ```
+        
+     3.   对自己的本地仓库做出想要的修改, 然后推送到自己的远程仓库
+     4.   如果希望项目原有者接受你的修改, 必须pull request
+     [返回问题](#question_32)
 33.  <span id="answer_33"></span>[返回问题](#question_33)
 34.  <span id="answer_34"></span>[返回问题](#question_34)
 35.  <span id="answer_35"></span>[返回问题](#question_35)
-36.  <span id="answer_36"></span>[返回问题](#question_36)
-37.  
+ 
